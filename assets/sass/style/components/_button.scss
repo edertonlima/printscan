@@ -1,0 +1,64 @@
+.button {
+  border-radius: 25px;
+  font-weight: $regular;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 14px 23px;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  @include animacao-off;
+
+  &:after {
+    content: "";
+    width: 9px; 
+    height: 18px;
+    margin-left: 23px;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00002 0.599609L8.00002 9.00049L1.00002 17.3996' stroke='white' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+
+    @include m1024 {
+      background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.729492 0.724609L5.45575 6.50022L0.729492 12.2746' stroke='white' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &:hover {
+    color: $cor2;
+    background-color: #ffffff;
+
+    &:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00002 0.599609L8.00002 9.00049L1.00002 17.3996' stroke='%23081F40' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+
+      @include m1024 {
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.729492 0.724609L5.45575 6.50022L0.729492 12.2746' stroke='%23081F40' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &--green {
+    border-color: $cor1;
+    background-color: $cor1;
+
+    &:hover {
+      color: #ffffff;
+      border-color: $cor2;
+      background-color: $cor2;
+
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00002 0.599609L8.00002 9.00049L1.00002 17.3996' stroke='white' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  @include m1024 {
+    font-size: .75rem;
+    padding: 7px 13px;
+
+    &:after {
+      width: 7px; 
+      height: 13px;
+      margin-left: 10px;
+    }
+  }
+}

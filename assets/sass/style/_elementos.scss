@@ -1,0 +1,114 @@
+strong {
+  font-weight: $extra-bold;
+}
+
+em {
+  color: $cor1;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 5.312rem;
+  line-height: 6.562rem;
+  font-weight: $regular;
+  color: $cor-txt;
+
+  @include m1024 {
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 3.312rem;
+  line-height: 4rem;
+  font-weight: $regular;
+  margin-bottom: 55px;
+  color: $cor2;
+  width: 100%;
+  max-width: 725px;
+
+  @include m1024 {
+    font-size: 1.75rem;
+    line-height: 2.137rem;
+    margin-bottom: 30px;
+  }
+}
+
+h3 {
+  font-weight: $regular;
+  font-size: 1.875rem;
+  line-height: 2.37rem;
+  color: $cor-txt;
+}
+
+h4 {
+  font-weight: $regular;
+  font-size: 1.875rem;
+  line-height: 2.37rem;
+  color: $cor-txt;
+
+  @include m1024 {
+    font-size: 1.37rem;
+    line-height: 2rem;
+  }
+}
+
+h5 {
+}
+
+h6 {
+}
+
+p {
+  font-size: $font-size;
+  line-height: 1.125rem;
+  font-weight: $light;
+  padding-bottom: 15px;
+  @include box-sizing;
+
+  &.title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    width: 100%;
+    max-width: 864px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  a {
+    font-weight: $light;
+    color: $rosa;
+
+    &:hover {
+      color: darken($rosa, 10%);
+      text-decoration: underline;
+    }
+  }
+
+  &.margin {
+    margin: 30px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  @include animacao;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.link {
+    font-weight: $semi-bold;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: $cor1;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

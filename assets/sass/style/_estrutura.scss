@@ -1,0 +1,43 @@
+html {
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+body * {
+  font-family: $font-family;
+  color: $cor-txt;
+}
+
+.container {
+  max-width: $width;
+  width: 100%;
+  padding: 0 $padding-container;
+  margin: 0 auto;
+  position: relative;
+  @include box-sizing;
+  @include clear;
+
+  @include m1024 {
+    padding: 0 25px;
+  }
+}
+
+.box-content {
+  @include clear;
+  @include box-sizing();
+  width: 100%;
+  position: relative;
+  padding: 85px 0;
+
+  @include m1024 {
+    padding: 50px 0;
+  }
+}
